@@ -1,0 +1,68 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JS Clock</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/watchDemo.css">
+</head>
+<body>
+	<div class="clock">
+		<div class="second" id="second"></div>
+		<div class="minute" id="minute"></div>
+		<div class="hours" id="hours"></div>
+		<div class="number">
+			<ul>
+				<li>12</li>
+                <li>3</li>
+				<li>6</li>
+				<li>9</li>
+			</ul>
+		</div>
+        <div class="needle-circle"></div>
+	</div>
+	<script>
+        $(document).ready(function(){
+
+            // setTime();            
+        })
+
+        
+
+        function setTime(){
+                var count = 0, degSec = 0, degMinute = 0, degHours = 0;
+                function getSecond(){
+                    count++;
+                    degSec = count * 6;
+                    console.log("degSec==>"+degSec)
+                    $('.second').css('transform', 'rotate('+degSec+'deg)');
+                    if(count > 59){
+                        count = 0;
+                    }
+                    function getMinute(){
+                    count++;
+                    degMin = count * 6;
+                    console.log("degMin==>"+degMin)
+                    $('.minute').css('transform', 'rotate('+degMin+'deg)');
+                    if(count > 59){
+                        count = 0;
+                    }
+
+                    function getHours(){
+                    count++;
+                    degHou = count * 6;
+                    console.log("degHou==>"+degHou)
+                    $('.hours').css('transform', 'rotate('+degHou+'deg)');
+                    if(count > 59){
+                        count = 0;
+                    }
+                }
+            }
+        }
+        
+            setInterval(function(){
+                    getSecond()
+                }, 1000)
+            }
+   </script>
+</body>
+</html>  

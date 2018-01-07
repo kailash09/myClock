@@ -1,0 +1,119 @@
+.second:before {
+    width: 4px;
+    height: 150px;
+    display: inline-block;
+    content: '';
+    background-color: red;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    position: relative;
+    margin: 0 auto;
+}
+
+.second {
+    height: 300px;
+    width: 4px;
+    position: absolute;
+    left: calc(50% - 2px);
+    z-index: 3;
+}
+
+.minute {
+    width: 5px;
+    height: 300px;
+    position: absolute;
+    left: calc(50% - 2.5px);
+    transform: rotate(79deg);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial;
+    color: #23ff23;
+}
+
+li {
+    position: absolute;
+    font-size: 25px;
+    color: yellow;
+}
+
+li:first-child {
+    top: -3px;
+    left: calc(50% - 14px);
+    z-index: 10;
+    font-size: 25px;
+    color: red;
+}
+
+li:nth-child(2) {
+    right: 0px;
+    top: 129px;
+    color: blue;
+}
+
+li:nth-child(3) {
+    left: calc(50% - 0px);
+    bottom: 0px;
+    color: green;
+}
+
+li:last-child {
+    left: 0px;
+    top: 129px
+}
+
+.hours {
+    position: absolute;
+    height: 300px;
+    width: 8px;
+    z-index: 1;
+    left: calc(50% - 4px);
+}
+
+.hours:before {
+    width: 8px;
+    height: 70px;
+    content: '';
+    position: absolute;
+    top: 80px;
+    background-color: red;
+}
+
+.minute:before {
+    width: 5px;
+    height: 100px;
+    content: '';
+    position: absolute;
+    top: 50px;
+    background-color: red;
+}
+
+.minute:after {
+    width: 5px;
+    display: inline-block;
+}
+.needle-circle{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+    z-index: 5;
+}
